@@ -8,27 +8,27 @@ import zkconst
 zk = zklib.ZKLib("192.168.1.201", 4370)
 
 ret = zk.connect()
-print("connection:", ret)
+print(("connection:", ret))
 
 if ret == True:
-    print("Disable Device", zk.disableDevice())
+    print(("Disable Device", zk.disableDevice()))
     
-    print("ZK Version:", zk.version())
-    print("OS Version:", zk.osversion())
+    print(("ZK Version:", zk.version()))
+    print(("OS Version:", zk.osversion()))
     """
     print "Extend Format:", zk.extendFormat()
     print "Extend OP Log:", zk.extendOPLog()
     """
     
-    print("Platform:", zk.platform())
-    print("Platform Version:", zk.fmVersion())
-    print("Work Code:", zk.workCode())
-    print("Work Code:", zk.workCode())
-    print("SSR:", zk.ssr())
-    print("Pin Width:", zk.pinWidth())
-    print("Face Function On:", zk.faceFunctionOn())
-    print("Serial Number:", zk.serialNumber())
-    print("Device Name:", zk.deviceName())
+    print(("Platform:", zk.platform()))
+    print(("Platform Version:", zk.fmVersion()))
+    print(("Work Code:", zk.workCode()))
+    print(("Work Code:", zk.workCode()))
+    print(("SSR:", zk.ssr()))
+    print(("Pin Width:", zk.pinWidth()))
+    print(("Face Function On:", zk.faceFunctionOn()))
+    print(("Serial Number:", zk.serialNumber()))
+    print(("Device Name:", zk.deviceName()))
     
     data_user = zk.getUser()
     print("Get User:")
@@ -39,7 +39,7 @@ if ret == True:
                 level = 'Admin'
             else:
                 level = 'User'
-            print("[UID %d]: ID: %s, Name: %s, Level: %s, Password: %s" % ( uid, data_user[uid][0], data_user[uid][1], level, data_user[uid][3]  ))
+            print(("[UID %d]: ID: %s, Name: %s, Level: %s, Password: %s" % ( uid, data_user[uid][0], data_user[uid][1], level, data_user[uid][3]  )))
 
         #zk.setUser(uid=61, userid='41', name='Dony Wahyu Isp', password='123456', role=zkconst.LEVEL_ADMIN)
     
@@ -48,7 +48,7 @@ if ret == True:
     
     if ( attendance ):
         for lattendance in attendance:
-            print(lattendance[1])
+            print((lattendance[1]))
             if lattendance[1] == 15:
                 state = 'Check In'
             elif lattendance[1] == 0:
@@ -56,11 +56,12 @@ if ret == True:
             else:
                 state = 'Undefined'
                 
-            print("date %s, Jam %s: %s, Status: %s" % ( lattendance[2].date(), lattendance[2].time(), lattendance[0], state ))
+            print(("date %s, Jam %s: %s, Status: %s" % ( lattendance[2].date(), lattendance[2].time(), lattendance[0], state )))
         
     # print "Clear Attendance:", zk.clearAttendance()
 
     
-    print("Get Time:", zk.getTime())
-    print("Enable Device", zk.enableDevice())
-    print("Disconnect:", zk.disconnect())
+    print(("Get Time:", zk.getTime()))
+    print(("Enable Device", zk.enableDevice()))
+    print(("Disconnect:", zk.disconnect()))
+

@@ -58,3 +58,4 @@ def zkextendoplog(self, index=0):
     self.counter = self.counter + 1
     print((self.data_recv.encode("hex")))
     return self.data_recv[8:]
+

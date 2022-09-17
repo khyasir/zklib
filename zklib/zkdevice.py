@@ -102,3 +102,4 @@ def zkdisabledevice(self):
         return self.data_recv[8:]
     except:
         return False
+
