@@ -72,8 +72,11 @@ class ZKLib:
                      command_string):
         """This function puts a the parts that make up a packet together and 
         packs them into a byte string"""
+        print ('check 1')
         buf = pack('HHHH', command, chksum,
                    session_id, reply_id) + command_string
+
+        print ('check 2')
 
         buf = unpack('8B' + '%sB' % len(command_string), buf)
 
